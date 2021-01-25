@@ -1,0 +1,15 @@
+<div class="list-group-item"
+     [ngClass]="{
+      'list-group-item-success': post.loveIts > 0,
+      'list-group-item-light': post.loveIts == 0,
+      'list-group-item-danger': post.loveIts < 0}" xmlns="http://www.w3.org/1999/html"
+     xmlns="http://www.w3.org/1999/html">
+  <h2>{{post.title}}</h2>
+  <h5>{{post.created_at | date: 'dd/MM/yyyy à HH:mm'}}</h5>
+  <p class="text-wrap"> {{post.content}}</p>
+  <span>
+    <input type="button" class="btn btn-success" (click)="loveIt()" value="Love it"/>
+    <input type="button" class="btn btn-danger" (click)="dontLoveIt()" value="Don't love it"/>
+    Like: {{post.loveIts}}
+  </span>
+</div>
