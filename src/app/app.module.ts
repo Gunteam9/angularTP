@@ -18,6 +18,8 @@ import { Exercice7Component } from './exercice7/exercice7.component';
 import { BlogComponent } from './blog/blog.component';
 import {PostListComponent} from './blog/post-list/post-list.component';
 import { CardGenerator4Component } from './exercice4/card-generator4/card-generator4.component';
+import { CardManagerComponent } from './exercice5/card-manager/card-manager.component';
+import { TableRow2Component } from './exercice5/table-row2/table-row2.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { CardGenerator4Component } from './exercice4/card-generator4/card-genera
     Exercice7Component,
     BlogComponent,
     PostListComponent,
-    CardGenerator4Component
+    CardGenerator4Component,
+    CardManagerComponent,
+    TableRow2Component
   ],
   imports: [
     BrowserModule,

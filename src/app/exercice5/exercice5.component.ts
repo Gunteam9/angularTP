@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataContainer} from './DataContainer';
 
 @Component({
   selector: 'app-exercice5',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercice5.component.css']
 })
 export class Exercice5Component implements OnInit {
+  currentId: number = 0;
+
+  data = DataContainer.getInstance().data;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
