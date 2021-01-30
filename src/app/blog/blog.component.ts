@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Post} from './Post';
+import {AppareilService} from '../services/appareil.service';
 
 @Component({
   selector: 'app-blog',

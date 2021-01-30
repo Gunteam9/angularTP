@@ -20,6 +20,9 @@ import {PostListComponent} from './blog/post-list/post-list.component';
 import { CardGenerator4Component } from './exercice4/card-generator4/card-generator4.component';
 import { CardManagerComponent } from './exercice5/card-manager/card-manager.component';
 import { TableRow2Component } from './exercice5/table-row2/table-row2.component';
+import {AppareilService} from './services/appareil.service';
+import {AuthService} from './services/auth.service';
+import {AuthGuard} from './services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,11 @@ import { TableRow2Component } from './exercice5/table-row2/table-row2.component'
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AppareilService,
+    AuthService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,17 +10,19 @@ import {Exercice5Component} from './exercice5/exercice5.component';
 import {Exercice6Component} from './exercice6/exercice6.component';
 import {Exercice7Component} from './exercice7/exercice7.component';
 import {BlogComponent} from './blog/blog.component';
+import {AuthGuard} from './services/auth-guard.service';
 
 const routes: Routes = [
   {path: 'Accueil', component: AppComponent},
-  {path: 'Exercice1', component: Exercice1Component},
+  {path: 'Exercice1', canActivate: [AuthGuard], component: Exercice1Component},
   {path: 'Exercice2', component: Exercice2Component},
   {path: 'Exercice3', component: Exercice3Component},
   {path: 'Exercice4', component: Exercice4Component},
   {path: 'Exercice5', component: Exercice5Component},
   {path: 'Exercice6', component: Exercice6Component},
   {path: 'Exercice7', component: Exercice7Component},
-  {path: 'Blog', component: BlogComponent}
+  {path: 'Blog', component: BlogComponent},
+  {path: '403', component: AppComponent}
 ];
 
 @NgModule({

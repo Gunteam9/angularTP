@@ -1,37 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
+import {AppareilService} from '../services/appareil.service';
+import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
+import {Observable} from 'rxjs';
+import {AuthService} from '../services/auth.service';
 
 @Component({
   selector: 'app-exercice1',
   templateUrl: './exercice1.component.html',
   styleUrls: []
 })
+
 export class Exercice1Component implements OnInit {
-  isAuth = false;
   lastUpdate = new Promise<Date>((resolve, reject) => { const date = new Date(); setTimeout(() => resolve(date), 500); } );
 
-  appareils = [
-    {
-      name: 'Machine à laver',
-      isActive: false
-    },
-    {
-      name: 'Frigo',
-      isActive: true
-    },
-    {
-      name: 'Ordinateur',
-      isActive: false
-    }
-  ];
+  appareils: any[] = [];
+  isAuth: boolean = this.authService.isAuth;
 
-  constructor() {
-    setTimeout(() => this.isAuth = true, 4000);
+  constructor(private appareilService: AppareilService, private authService: AuthService) {
+    setTimeout(() => this.authService.isAuth = true, 1000);
+  }
+
+  ngOnInit(): void {
+    this.appareils = this.appareilService.appareils;
   }
 
   onAllumer(): void {
     console.log('Allumer');
   }
 
-  ngOnInit(): void {
+  switchOnAll() {
+    for (let appareil of this.appareils)
+      appareil.isActive = true;
+  }
+
+  switchOffAll() {
+    for (let appareil of this.appareils)
+      appareil.isActive = false;
   }
 }
