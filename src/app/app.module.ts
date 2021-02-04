@@ -23,6 +23,8 @@ import { TableRow2Component } from './exercice5/table-row2/table-row2.component'
 import {AppareilService} from './services/appareil.service';
 import {AuthService} from './services/auth.service';
 import {AuthGuard} from './services/auth-guard.service';
+import {IndividuService} from './services/individu.service';
+import { TableRow3Component } from './exercice6/table-row3/table-row3.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import {AuthGuard} from './services/auth-guard.service';
     PostListComponent,
     CardGenerator4Component,
     CardManagerComponent,
-    TableRow2Component
+    TableRow2Component,
+    TableRow3Component
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import {AuthGuard} from './services/auth-guard.service';
   providers: [
     AppareilService,
     AuthService,
-    AuthGuard
+    AuthGuard,
+    IndividuService
   ],
   bootstrap: [AppComponent]
 })

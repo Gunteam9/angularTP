@@ -1,1 +1,20 @@
-<p>exercice6 works!</p>
+<div class="container">
+  <table class="table table-dark table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Genre</th>
+      <th>Nom</th>
+      <th>Mail</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr app-table-row3 *ngFor="let item of individus"
+        [individu]="item">
+
+    </tr>
+
+    </tbody>
+  </table>
+</div>
