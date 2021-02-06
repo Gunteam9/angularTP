@@ -8,7 +8,7 @@ import {Individu} from '../../services/individu.service';
 })
 export class TableRow3Component implements OnInit {
 
-  @Input() individu: Individu | undefined;
+  @Input() individu!: Individu;
 
   constructor() { }
 

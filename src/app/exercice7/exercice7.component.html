@@ -1,1 +1,9 @@
-<p>exercice7 works!</p>
+<ul>
+  <li app-input-modify
+      *ngFor="let item of elements; let i = index"
+      [index]="i">
+
+  </li>
+</ul>
+
+<input type="button" value="Add item" (click)="onAddItem()">

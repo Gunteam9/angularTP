@@ -1,0 +1,5 @@
+  <div class="row">
+    <span id="input-of-item-{{index}}" class="col-2 col-sm-1"> {{name}} </span>
+    <input type="button" value="Edit" (click)="onEnableEdit()">
+    <input type="text" [(ngModel)]="name" *ngIf="enableEdit" class="col-2 col-sm-1" (focusout)="onEndEdit()">
+  </div>

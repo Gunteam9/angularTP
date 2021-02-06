@@ -1,4 +1,4 @@
-var random = require('generate-random-data');
+const random = require('generate-random-data');
 
 export class IndividuService {
   individus:Individu[] = [];

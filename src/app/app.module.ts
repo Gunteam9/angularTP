@@ -25,6 +25,8 @@ import {AuthService} from './services/auth.service';
 import {AuthGuard} from './services/auth-guard.service';
 import {IndividuService} from './services/individu.service';
 import { TableRow3Component } from './exercice6/table-row3/table-row3.component';
+import { InputModifyComponent } from './exercice7/input-modify/input-modify.component';
+import {OtherService} from './services/other.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { TableRow3Component } from './exercice6/table-row3/table-row3.component'
     CardGenerator4Component,
     CardManagerComponent,
     TableRow2Component,
-    TableRow3Component
+    TableRow3Component,
+    InputModifyComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { TableRow3Component } from './exercice6/table-row3/table-row3.component'
     AppareilService,
     AuthService,
     AuthGuard,
-    IndividuService
+    IndividuService,
+    OtherService
   ],
   bootstrap: [AppComponent]
 })
