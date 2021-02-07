@@ -27,6 +27,10 @@ import {IndividuService} from './services/individu.service';
 import { TableRow3Component } from './exercice6/table-row3/table-row3.component';
 import { InputModifyComponent } from './exercice7/input-modify/input-modify.component';
 import {OtherService} from './services/other.service';
+import { Exercice8Component } from './exercice8/exercice8.component';
+import { Exercice9Component } from './exercice9/exercice9.component';
+import { Exo8AnimauxComponent } from './exercice8/exo8-animaux/exo8-animaux.component';
+import {AnimauxService} from './services/animaux.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,10 @@ import {OtherService} from './services/other.service';
     CardManagerComponent,
     TableRow2Component,
     TableRow3Component,
-    InputModifyComponent
+    InputModifyComponent,
+    Exercice8Component,
+    Exercice9Component,
+    Exo8AnimauxComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +67,8 @@ import {OtherService} from './services/other.service';
     AuthService,
     AuthGuard,
     IndividuService,
-    OtherService
+    OtherService,
+    AnimauxService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="card-columns">
+      <div class="card" *ngFor="let item of categorie.animaux">
+        <div class="card-header" style="height: 130px; overflow: hidden">
+          <h2>{{item.nom}}</h2>
+        </div>
+        <div class="card-body" style="height: 300px; overflow: hidden">
+          <img src="{{item.photo}}" />
+          <h3>{{item.nomSci}}</h3>
+          <p>{{item.habitat}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
