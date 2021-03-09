@@ -31,7 +31,7 @@ export class OtherService {
   }
 
   /**
-   * Modify the item at the given index with the given string
+   * Update the item at the given index with the given string
    * @param id
    * @param name
    */
