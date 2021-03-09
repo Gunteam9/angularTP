@@ -10,12 +10,18 @@ export class Exercice6Component implements OnInit {
 
   individus: Individu[] = [];
 
-  constructor(private indiviuService: IndividuService) {
+  constructor(private individuService: IndividuService) {
   }
 
 
   ngOnInit(): void {
-    this.individus = this.indiviuService.individus;
+    this.individus = this.individuService.individus;
   }
 
+  getBackgroundColor(i: number): string {
+    if (i%2 == 0)
+      return "lightgreen";
+    else
+      return "lightsalmon";
+  }
 }

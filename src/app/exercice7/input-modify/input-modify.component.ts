@@ -26,6 +26,7 @@ export class InputModifyComponent implements OnInit {
 
   onEndEdit(): void {
     this.enableEdit = false;
+    this.otherService.editItemExo7(this.index, this.name);
   }
 
 }
